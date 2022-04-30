@@ -65,12 +65,12 @@ def prediction(input,stopwords=stopwords):
     
 if st.button(label="Submit"):
 #   st.write("positive")
-  try:
+#   try:
     
     p=prediction(text)
     st.write(p)
     
-  except:
-    pass
-else:
-  pass
+#   except:
+#     pass
+# else:
+#   pass
