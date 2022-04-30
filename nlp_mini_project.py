@@ -15,6 +15,7 @@ NLP mini project
 ''')
 
 text = st.text_input('Enter your sentence in the Kannada Language')
+st.write('bjsh')
 
 file_name = "dictionary.zip"
 with ZipFile(file_name, 'r') as zip1:
