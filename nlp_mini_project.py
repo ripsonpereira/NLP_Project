@@ -43,9 +43,9 @@ def prediction(input,stopwords=stopwords):
    
     lst5=[i for i in lst if i not in stopwords ]
 
-    lst6 = []
-    for each in lst5:
-        lst6.append(data[each])
+    lst6 = lst5
+#     for each in lst5:
+#         lst6.append(data[each])
         # print(data[each])
     # print(lst6)
 
