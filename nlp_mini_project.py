@@ -15,7 +15,6 @@ NLP mini project
 ''')
 
 text = st.text_input('Enter your sentence in the Kannada Language')
-st.write('bjsh')
 
 file_name = "dictionary.zip"
 with ZipFile(file_name, 'r') as zip1:
@@ -43,9 +42,9 @@ def prediction(input,stopwords=stopwords):
    
     lst5=[i for i in lst if i not in stopwords ]
 
-    lst6 = lst5
-#     for each in lst5:
-#         lst6.append(data[each])
+    lst6 = []
+    for each in lst5:
+        lst6.append(data[each])
         # print(data[each])
     # print(lst6)
 
@@ -58,19 +57,15 @@ def prediction(input,stopwords=stopwords):
     
     
     if a[0]==1:
-        return "Positive"
+        st.write('Positive')
     else:
-        return "Negative"
+        st.write('Negative')
        
     
 if st.button(label="Submit"):
-#   st.write("positive")
-#   try:
-    
-    p=prediction(text)
-    st.write(p)
-    
-#   except:
-#     pass
-# else:
-#   pass
+  try:
+    prediction(text)
+  except:
+    pass
+else:
+  pass
