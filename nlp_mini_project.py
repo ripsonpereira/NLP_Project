@@ -34,7 +34,7 @@ stopwords=[]
 for line in Lines:
     stopwords.append(str(line.strip()))
     
-print(stopwords)
+
 
 def prediction(input,stopwords=stopwords):
     longest = 340
@@ -65,6 +65,7 @@ def prediction(input,stopwords=stopwords):
 if st.button(label="Submit"):
   try:
     prediction(text)
+    st.write("positive")
   except:
     pass
 else:
